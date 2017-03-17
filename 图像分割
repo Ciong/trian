@@ -1,0 +1,12 @@
+//小波分析的图片与原图相减//
+a=imread('5556.jpg');
+b=imread('相减之后的图像2.jpg');%C:\Users\Administrator\Desktop\1234.png
+% b=rgb2gray(b);
+% imwrite(b,'123.jpg','jpg');
+size = [699 900];
+I = imresize(a,size);
+J = imresize(b,size);
+Iq=imsubtract(I,J);
+% Im=im2bw(Iq,.256666);
+imshow(Iq);
+%imwrite(Iq,'相减之后的图像5.jpg','jpg');
